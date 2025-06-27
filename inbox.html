@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الماستر كلاس الشامل في كتابة الإعلانات | من مبتدئ إلى محترف</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #0d1117;
+            --bg-medium: #161b22;
+            --border-color: #30363d;
+            --text-primary: #c9d1d9;
+            --text-secondary: #8b949e;
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 800;
+        }
+        .main-title {
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-border {
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            border-image: linear-gradient(90deg, var(--accent-blue), var(--accent-green)) 1;
+        }
+        .tab-button {
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            padding-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+        .tab-button.active {
+            color: var(--accent-blue);
+            border-bottom-color: var(--accent-blue);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .accordion-button {
+            transition: background-color 0.3s ease;
+        }
+        .accordion-button.open, .accordion-button:hover {
+            background-color: #22272e;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+            background-color: var(--bg-dark);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .highlight {
+            color: var(--accent-blue);
+            font-weight: 700;
+        }
+        .pro-tip {
+            background-color: rgba(56, 139, 253, 0.1);
+            border-right: 4px solid var(--accent-blue);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header -->
+    <header class="bg-opacity-80 backdrop-blur-md bg-[#161b22] shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-black text-white"><i class="fa-solid fa-feather-pointed text-blue-400"></i> ماستر كلاس الكوبي رايتنج</h1>
+            <nav class="hidden md:flex space-x-6 space-x-reverse font-medium">
+                <a href="#module1" class="hover:text-blue-400 transition">الوحدة الأولى: علم النفس</a>
+                <a href="#module2" class="hover:text-blue-400 transition">الوحدة الثانية: فن الصياغة</a>
+                <a href="#module3" class="hover:text-blue-400 transition">الوحدة الثالثة: الاستراتيجية</a>
+                <a href="#module4" class="hover:text-blue-400 transition">الوحدة الرابعة: المسيرة المهنية</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(13, 17, 23, 0.85), rgba(13, 17, 23, 1)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+        <div class="p-8 reveal visible">
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-black main-title mb-6">الماستر كلاس الشامل في كتابة الإعلانات</h2>
+            <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8 font-medium">ورشة عمل مكثفة لتحويلك من مبتدئ إلى محترف يمتلك عقلية، أدوات، واستراتيجيات كتابة الإعلانات الناجحة في السوق الرقمي.</p>
+            <a href="#module1" class="px-10 py-4 bg-blue-600 text-white font-bold rounded-lg text-lg hover:bg-blue-700 transition-transform transform hover:scale-105 shadow-lg">
+                <i class="fa-solid fa-rocket"></i> ابدأ رحلة الاحتراف
+            </a>
+        </div>
+    </section>
+
+    <!-- Module 1: The Foundation -->
+    <section id="module1" class="py-20 px-6 reveal">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4"><span class="main-title">الوحدة الأولى</span>: الأساس - سيكولوجية الإقناع</h2>
+            <p class="text-lg text-center text-gray-400 mb-12">أقوى الكتاب ليسوا من يتقنون اللغة، بل من يتقنون فهم الطبيعة البشرية. هذه الوحدة هي حجر الأساس.</p>
+
+            <div class="tabs-container bg-[#161b22] rounded-lg p-6">
+                <!-- Tab Buttons -->
+                <div class="flex border-b border-gray-700 mb-6 flex-wrap">
+                    <button class="tab-button active text-lg" data-tab="tab1-1">شخصية العميل (Avatar)</button>
+                    <button class="tab-button text-lg mx-4" data-tab="tab1-2">محفزات القرار</button>
+                    <button class="tab-button text-lg" data-tab="tab1-3">لماذا نشتري؟</button>
+                </div>
+                <!-- Tab Content -->
+                <div id="tab1-1" class="tab-content active">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">أهم خطوة تتخطاها 90% من الشركات: بناء شخصية العميل (Customer Avatar)</h3>
+                    <p class="mb-4">الكتابة للجميع هي كتابة للا أحد. مهمتك الأولى والأهم هي تحديد الشخص الذي تخاطبه بدقة متناهية. تخيل أنك تكتب رسالة بريد إلكتروني لصديقك المقرب؛ ستكون كلماتك دقيقة، شخصية، ومؤثرة. هذا ما نهدف إليه.</p>
+                    <div class="bg-gray-900 p-6 rounded-lg">
+                        <h4 class="font-bold text-xl mb-2">قالب بناء شخصية العميل المفصّل:</h4>
+                        <ul class="list-disc pr-6 space-y-3">
+                            <li><strong>البيانات الديموغرافية:</strong> (العمر، الجنس، الموقع، الوظيفة، الدخل). <span class="text-gray-500">- هذا يحدد "من" هو العميل.</span></li>
+                            <li><strong>الأهداف والقيم:</strong> ما الذي يسعى لتحقيقه؟ (مثال: "الحصول على ترقية"، "قضاء وقت أكثر مع العائلة"). <span class="text-gray-500">- هذا يحدد ما يدفعه.</span></li>
+                            <li><strong>مصادر معلوماته:</strong> ما هي الكتب/المدونات/المؤثرين الذين يتابعهم؟ (يوتيوب، فيسبوك، انستغرام؟). <span class="text-gray-500">- هذا يحدد "أين" تجده وكيف تخاطبه.</span></li>
+                            <li><strong class="text-red-400">نقاط الألم والإحباطات:</strong> ما هي أكبر مشاكله اليومية؟ ما الذي يمنعه من تحقيق أهدافه؟ (مثال: "لا أجد وقتًا للتمرين"، "أشعر أن المنافسين يسبقونني"). <span class="text-yellow-400 font-bold">- هذا هو "الجرح" الذي ستعالجه كلماتك.</span></li>
+                            <li><strong class="text-green-400">الأحلام والطموحات:</strong> كيف تبدو حياته المثالية بعد حل مشكلته؟ ما هو الشعور الذي يبحث عنه؟ (الثقة، الراحة، الأمان، التقدير). <span class="text-yellow-400 font-bold">- هذه هي "الجنة" التي تعده بها.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="tab1-2" class="tab-content">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">مبادئ الإقناع الستة لروبرت سيالديني</h3>
+                    <p class="mb-4">هذه المبادئ هي اختصارات عقلية يستخدمها البشر لاتخاذ القرارات. فهمها يمنحك قوة هائلة.</p>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div class="bg-gray-900 p-4 rounded-lg"><strong>1. التبادل (Reciprocity):</strong> نشعر بأننا مدينون لمن يقدم لنا شيئًا. <span class="text-green-400 block mt-1">مثال: تقديم كتاب إلكتروني مجاني أو استشارة مجانية.</span></div>
+                        <div class="bg-gray-900 p-4 rounded-lg"><strong>2. الندرة (Scarcity):</strong> نرغب في الأشياء التي نشعر أنها على وشك النفاد. <span class="text-green-400 block mt-1">مثال: "مقعدان فقط متبقيان"، "عرض ينتهي خلال 24 ساعة".</span></div>
+                        <div class="bg-gray-900 p-4 rounded-lg"><strong>3. السلطة (Authority):</strong> نثق في الخبراء وأصحاب السلطة. <span class="text-green-400 block mt-1">مثال: "موصى به من قبل 9 أطباء من أصل 10"، عرض شهادات الخبراء.</span></div>
+                        <div class="bg-gray-900 p-4 rounded-lg"><strong>4. الالتزام والاستمرارية (Commitment & Consistency):</strong> نحب أن تكون أفعالنا متسقة مع أقوالنا السابقة. <span class="text-green-400 block mt-1">مثال: ابدأ بطلب صغير (like) ثم أكبر (comment) ثم الأكبر (share/buy).</span></div>
+                        <div class="bg-gray-900 p-4 rounded-lg"><strong>5. الإعجاب (Liking):</strong> نفضل أن نقول "نعم" للأشخاص الذين نحبهم ونعجب بهم. <span class="text-green-400 block mt-1">مثال: استخدام مؤثرين محبوبين، إظهار القصص الإنسانية لفريق العمل.</span></div>
+                        <div class="bg-gray-900 p-4 rounded-lg"><strong>6. الإجماع (Consensus/Social Proof):</strong> نميل إلى فعل ما يفعله الآخرون. <span class="text-green-400 block mt-1">مثال: "انضم إلى 50,000 مستخدم سعيد"، عرض تقييمات العملاء.</span></div>
+                    </div>
+                </div>
+                <div id="tab1-3" class="tab-content">
+                    <h3 class="text-2xl font-bold text-blue-400 mb-4">الدماغ وقرار الشراء: ابدأ بـ "لماذا"</h3>
+                    <p class="mb-4">الناس لا يشترون ما تفعله، بل يشترون لماذا تفعله. هذه هي نظرية "الدائرة الذهبية" لسيمون سينك، التي تفصل بين الشركات العادية والشركات الملهمة.</p>
+                    <ul class="space-y-4">
+                        <li class="bg-gray-900 p-4 rounded-lg"><strong>❌ ماذا (What):</strong> المستوى السطحي. "نحن نصنع أجهزة كمبيوتر." (كل المنافسين يقولون ذلك).</li>
+                        <li class="bg-gray-900 p-4 rounded-lg"><strong>⚠️ كيف (How):</strong> المستوى العملي. "أجهزتنا مصممة بشكل جميل وسهلة الاستخدام." (هذا يميزك قليلاً).</li>
+                        <li class="bg-gray-900 p-4 rounded-lg"><strong>✅ لماذا (Why):</strong> المستوى العاطفي والملهم. "في كل ما نفعله، نؤمن بتحدي الوضع الراهن والتفكير بشكل مختلف. نحن نفعل ذلك عن طريق جعل منتجاتنا مصممة بشكل جميل، سهلة الاستخدام، وذكية. وهكذا، نصنع أجهزة كمبيوتر رائعة. هل تريد شراء واحد؟" (هذه هي قصة Apple).</li>
+                    </ul>
+                    <div class="pro-tip">
+                        <p><i class="fa-solid fa-lightbulb"></i> <strong>نصيحة احترافية:</strong> "لماذا" الخاصة بك ليست "تحقيق الربح". هذا هو الناتج. "لماذا" هي غايتك، قضيتك، إيمانك. لماذا تقوم شركتك من الأساس؟</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Workshop -->
+            <div class="mt-12 p-8 gradient-border rounded-lg text-center reveal">
+                 <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-person-digging"></i> ورشة عمل الوحدة الأولى</h3>
+                 <p class="text-lg">اختر منتجًا تعرفه جيدًا. قم ببناء "شخصية العميل" المثالية له بالتفصيل. ثم، اكتب فقرة قصيرة تشرح كيف يمكن استخدام مبدأ "الندرة" ومبدأ "الإجماع" لتسويق هذا المنتج.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Module 2: The Craft -->
+    <section id="module2" class="py-20 px-6 bg-[#161b22] reveal">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4"><span class="main-title">الوحدة الثانية</span>: فن الصياغة - بناء رسالة لا تُنسى</h2>
+            <p class="text-lg text-center text-gray-400 mb-12">هنا نحول علم النفس إلى كلمات ساحرة. سنتعلم كيف نصمم العناوين، ونبني النصوص، ونكتب دعوات لاتخاذ إجراء لا يمكن مقاومتها.</p>
+            
+             <div class="accordion">
+                <!-- Accordion Item 1: Headlines -->
+                <div class="accordion-item bg-gray-900 rounded-lg mb-4">
+                    <button class="accordion-button w-full text-right p-6 text-xl font-bold flex justify-between items-center">
+                        <span><i class="fa-solid fa-heading text-green-400"></i> فن صياغة العناوين التي لا تقاوم</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                         <div class="py-4 border-t border-gray-700">
+                             <p class="mb-4">80% من القراء يقرؤون العنوان، و20% فقط يكملون الباقي. مهمة العنوان هي أن تجعلهم يقرؤون الجملة التالية. إنه أهم جزء في أي نص إعلاني.</p>
+                             <h4 class="font-bold text-lg mb-2">أشهر 5 معادلات للعناوين:</h4>
+                            <ol class="list-decimal pr-6 space-y-4">
+                                <li><strong>الفائدة المباشرة:</strong> "الطريقة الجديدة لـ [تحقيق نتيجة مرغوبة]". <br><span class="text-gray-400">مثال: "الطريقة الجديدة لتعلم الإنجليزية في 15 دقيقة يوميًا".</span></li>
+                                <li><strong>"كيف تفعل":</strong> "كيف [تحقق نتيجة مرغوبة] بدون [ألم أو مشكلة]". <br><span class="text-gray-400">مثال: "كيف تخسر الوزن بدون الذهاب إلى الجيم".</span></li>
+                                <li><strong>السؤال المثير للفضول:</strong> اطرح سؤالاً يت reson resonate مع مشكلة القارئ. <br><span class="text-gray-400">مثال: "هل ترتكب هذه الأخطاء في سيرتك الذاتية؟"</span></li>
+                                <li><strong>القائمة الرقمية:</strong> "X طرق لـ [تحقيق نتيجة مرغوبة]". <br><span class="text-gray-400">مثال: "7 طرق مثبتة علميًا لزيادة تركيزك".</span></li>
+                                <li><strong>الشهادة/الإجماع:</strong> "هكذا [فعل شخص مثل القارئ] [نتيجة مذهلة]". <br><span class="text-gray-400">مثال: "هكذا تمكنت أم لطفلين من بناء عملها الخاص من المنزل".</span></li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Accordion Item 2: Body Copy -->
+                <div class="accordion-item bg-gray-900 rounded-lg mb-4">
+                    <button class="accordion-button w-full text-right p-6 text-xl font-bold flex justify-between items-center">
+                        <span><i class="fa-solid fa-pen-nib text-green-400"></i> أطر عمل كتابة النص الأساسي (Body Copy)</span>
+                         <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <div class="py-4 border-t border-gray-700">
+                             <h4 class="font-bold text-lg mb-2 text-blue-400">إطار عمل PAS (Problem, Agitate, Solution)</h4>
+                             <p class="mb-4">إطار عمل قوي جدًا لأنه يركز على الألم قبل تقديم الحل.</p>
+                             <ul class="space-y-2">
+                                 <li><strong>1. المشكلة (Problem):</strong> ابدأ بذكر مشكلة العميل بدقة. "هل تجد صعوبة في النوم ليلًا؟"</li>
+                                 <li><strong>2. الإثارة/التحريك (Agitate):</strong> عمّق الجرح. اذكر العواقب السلبية لهذه المشكلة. "قلة النوم تدمر تركيزك في اليوم التالي، وتؤثر على مزاجك وعلاقاتك."</li>
+                                 <li><strong>3. الحل (Solution):</strong> قدم منتجك كحل مثالي لهذه المشكلة. "نقدم لك شاي الأعشاب المهدئ، المصمم لمساعدتك على الاسترخاء والنوم بعمق."</li>
+                             </ul>
+                             <hr class="my-4 border-gray-700">
+                             <h4 class="font-bold text-lg mb-2 text-blue-400">إطار عمل AIDA (Attention, Interest, Desire, Action)</h4>
+                             <p class="mb-4">إطار كلاسيكي يتبع رحلة القارئ النفسية.</p>
+                             <ul class="space-y-2">
+                                 <li><strong>1. الانتباه (Attention):</strong> اخطف انتباههم بعنوان قوي أو صورة مؤثرة.</li>
+                                 <li><strong>2. الاهتمام (Interest):</strong> قدم معلومات مثيرة للاهتمام، وركز على الفوائد وليس الميزات.</li>
+                                 <li><strong>3. الرغبة (Desire):</strong> حول الاهتمام إلى رغبة قوية. استخدم الشهادات، الصور، وتخيل حياة العميل بعد استخدام المنتج.</li>
+                                 <li><strong>4. الإجراء (Action):</strong> اطلب منهم اتخاذ إجراء واضح ومباشر. "اشتر الآن"، "سجل في الدورة".</li>
+                             </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3: Call to Action -->
+                <div class="accordion-item bg-gray-900 rounded-lg mb-4">
+                    <button class="accordion-button w-full text-right p-6 text-xl font-bold flex justify-between items-center">
+                        <span><i class="fa-solid fa-bullhorn text-green-400"></i> صياغة الدعوة لاتخاذ إجراء (Call to Action - CTA)</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-content px-6">
+                        <div class="py-4 border-t border-gray-700">
+                             <p class="mb-4">الـ CTA هو ما يطلب من القارئ أن يفعله. إذا كان ضعيفًا أو غامضًا، ستخسر العميل حتى لو كان النص السابق رائعًا.</p>
+                             <h4 class="font-bold text-lg mb-2">قواعد الـ CTA الفعال:</h4>
+                            <ul class="list-disc pr-6 space-y-2">
+                                <li><strong>كن واضحًا ومباشرًا:</strong> استخدم أفعال الأمر. (اشتر، سجل، حمل، ابدأ).</li>
+                                <li><strong>خاطب الفائدة:</strong> بدلاً من "إرسال"، استخدم "احصل على كتابي المجاني". بدلاً من "شراء"، استخدم "ابدأ رحلتك نحو الرشاقة".</li>
+                                <li><strong>أضف إلحاحًا أو ندرة (إذا كان حقيقيًا):</strong> "احجز مكانك قبل نفاد المقاعد".</li>
+                                <li><strong>اجعله بارزًا بصريًا:</strong> استخدم زرًا بلون متباين وحجم كبير.</li>
+                            </ul>
+                            <div class="pro-tip">
+                                <p><i class="fa-solid fa-lightbulb"></i> <strong>نصيحة احترافية:</strong> عالج الاعتراض الأخير قبل الـ CTA. أضف جملة مثل "ضمان استرجاع الأموال لمدة 30 يومًا" أو "آمن 100%" لزيادة الثقة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Workshop -->
+            <div class="mt-12 p-8 gradient-border rounded-lg text-center reveal">
+                 <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-person-digging"></i> ورشة عمل الوحدة الثانية</h3>
+                 <p class="text-lg">خذ المنتج من ورشة العمل السابقة. اكتب له نصًا إعلانيًا قصيرًا باستخدام إطار عمل PAS. ثم، صمم له 3 أشكال مختلفة من الـ CTA (الدعوة لاتخاذ إجراء).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 3: The Engine -->
+    <section id="module3" class="py-20 px-6 reveal">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4"><span class="main-title">الوحدة الثالثة</span>: الاستراتيجية - بناء آلة التسويق</h2>
+            <p class="text-lg text-center text-gray-400 mb-12">المحترف لا يكتب نصوصًا عشوائية، بل يصمم رحلة متكاملة للعميل تحول الغرباء إلى معجبين ثم إلى عملاء مخلصين.</p>
+
+            <div class="bg-[#161b22] p-8 rounded-lg">
+                <h3 class="text-2xl font-bold text-center mb-6">القمع التسويقي الكامل (The Full Marketing Funnel)</h3>
+                <div class="grid md:grid-cols-3 gap-6 text-center">
+                    <!-- TOFU -->
+                    <div class="bg-gray-900 p-6 rounded-lg border-t-4 border-blue-500">
+                        <h4 class="text-xl font-bold text-blue-400 mb-2">قمة القمع (TOFU - Top of Funnel)</h4>
+                        <p class="font-bold">الهدف: الوعي والانجذاب</p>
+                        <p class="text-sm text-gray-400 mb-2">هنا، العميل لا يعرفك أو لا يعرف حتى أن لديه مشكلة.</p>
+                        <p><strong>أسلوب الكتابة:</strong> تعليمي وترفيهي. "كيف تفعل.."، "5 أسباب لـ..". لا تبيع أي شيء.</p>
+                        <p><strong>أمثلة المحتوى:</strong> منشورات مدونة، فيديوهات يوتيوب، إنفوجرافيك، منشورات سوشيال ميديا.</p>
+                    </div>
+                    <!-- MOFU -->
+                    <div class="bg-gray-900 p-6 rounded-lg border-t-4 border-yellow-500">
+                        <h4 class="text-xl font-bold text-yellow-400 mb-2">منتصف القمع (MOFU - Middle of Funnel)</h4>
+                        <p class="font-bold">الهدف: بناء الثقة وجمع البيانات</p>
+                         <p class="text-sm text-gray-400 mb-2">العميل يعرفك ويفكر في الحلول. أنت تبني علاقة.</p>
+                        <p><strong>أسلوب الكتابة:</strong> تقديم قيمة عميقة مقابل بيانات الاتصال (Lead Magnet).</p>
+                        <p><strong>أمثلة المحتوى:</strong> كتب إلكترونية، ويبينار، دراسات حالة، قوالب مجانية، قوائم تدقيق.</p>
+                    </div>
+                    <!-- BOFU -->
+                    <div class="bg-gray-900 p-6 rounded-lg border-t-4 border-red-500">
+                        <h4 class="text-xl font-bold text-red-400 mb-2">أسفل القمع (BOFU - Bottom of Funnel)</h4>
+                        <p class="font-bold">الهدف: التحويل والبيع</p>
+                         <p class="text-sm text-gray-400 mb-2">العميل مستعد للشراء ويقارن بين الخيارات. مهمتك هي إقناعه بأنك الخيار الأفضل.</p>
+                        <p><strong>أسلوب الكتابة:</strong> استجابة مباشرة، إلحاح، تركيز على الفوائد والعرض.</p>
+                        <p><strong>أمثلة المحتوى:</strong> صفحات المبيعات، إعلانات مباشرة، عروض خاصة، استشارات مجانية، نسخ تجريبية.</p>
+                    </div>
+                </div>
+            </div>
+             <!-- Workshop -->
+            <div class="mt-12 p-8 gradient-border rounded-lg text-center reveal">
+                 <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-person-digging"></i> ورشة عمل الوحدة الثالثة</h3>
+                 <p class="text-lg">صمم فكرة حملة تسويقية بسيطة لمنتجك عبر القمع. حدد عنوانًا واحدًا لمحتوى في كل مرحلة. (مثال: TOFU: منشور "5 أسباب تجعلك تشعر بالتعب دائمًا". MOFU: كتاب مجاني "دليلك للنوم العميق". BOFU: إعلان لبيع شاي الأعشاب المهدئ مع خصم 20%).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Module 4: The Professional -->
+    <section id="module4" class="py-20 px-6 bg-[#161b22] reveal">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4"><span class="main-title">الوحدة الرابعة</span>: المسيرة المهنية والأخلاق</h2>
+            <p class="text-lg text-center text-gray-400 mb-12">المعرفة بلا تطبيق لا قيمة لها. كيف تحول هذه المهارات إلى مهنة ناجحة ومستدامة؟</p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-briefcase text-purple-400"></i> بناء مسيرتك المهنية</h3>
+                    <ul class="space-y-4">
+                        <li><strong>بناء معرض الأعمال (Portfolio):</strong> هذا أهم من سيرتك الذاتية. لا تملك عملاء بعد؟ اختر 3-4 علامات تجارية تحبها وأعد كتابة إعلاناتها (صفحة هبوط، إعلان فيسبوك، سلسلة إيميلات). هذا يظهر مهارتك.</li>
+                        <li><strong>إيجاد العملاء:</strong> ابدأ صغيرًا على منصات العمل الحر (Upwork, Freelancer) لبناء خبرة وتقييمات. ثم، ابدأ بالتواصل المباشر مع الشركات التي ترى أن كتابتها الإعلانية ضعيفة وقدم لهم قيمة أولاً.</li>
+                        <li><strong>تسعير خدماتك:</strong> لا تسعر بالساعة، بل بالمشروع أو بالقيمة التي تقدمها. ابحث عن أسعار السوق، ولكن لا تخف من رفع سعرك كلما زادت خبرتك ونتائجك.</li>
+                    </ul>
+                </div>
+                 <div class="bg-gray-900 p-6 rounded-lg">
+                    <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-robot text-purple-400"></i> الذكاء الاصطناعي (AI) كشريك</h3>
+                    <p class="mb-4">الذكاء الاصطناعي لن يحل محلك، بل سيحل محل الكتاب الذين يعملون كآلات. مهمتك هي أن تكون المفكر الاستراتيجي والمبدع.</p>
+                    <div class="pro-tip">
+                        <p><i class="fa-solid fa-lightbulb"></i> <strong>مثال على prompt احترافي:</strong> "تصرف ككاتب إعلانات متخصص في التجارة الإلكترونية. اكتب لي 5 عناوين لإعلان فيسبوك لمنتج [اسم المنتج ووصفه]. جمهوري المستهدف هو [وصف شخصية العميل]. استخدم إطار عمل السؤال المثير للفضول وركز على فائدة [الفائدة الرئيسية]."</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Final Project -->
+            <div class="mt-12 p-8 gradient-border rounded-lg text-center reveal">
+                 <h3 class="text-2xl font-bold mb-4"><i class="fa-solid fa-graduation-cap"></i> مشروع التخرج النهائي</h3>
+                 <p class="text-lg">اختر علامة تجارية محلية أو عالمية. قم بإعداد تحليل واستراتيجية كتابة إعلانية (صفحة واحدة)، تتضمن: شخصية العميل المفصلة، تحليل لرسالتهم الحالية، واقتراح لرسالة جديدة تعتمد على إطار عمل StoryBrand، مع 3 عناوين جديدة لصفحتهم الرئيسية، ونص إعلان قصير باستخدام إطار PAS.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-center p-8 mt-12">
+        <h2 class="text-3xl font-black main-title mb-6">لقد وصلت إلى نهاية الماستر كلاس، وبداية رحلتك الحقيقية.</h2>
+        <p class="text-gray-400 max-w-2xl mx-auto">أنت الآن لا تمتلك المعرفة فقط، بل تمتلك خارطة طريق واضحة لتطبيقها. تذكر، كل خبير كان يومًا ما مبتدئًا لم يستسلم.</p>
+        <p class="mt-4 font-bold text-xl">ما هي القصة التي ستكتبها الآن؟</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Tabs functionality
+            const tabContainers = document.querySelectorAll('.tabs-container');
+            tabContainers.forEach(container => {
+                const tabButtons = container.querySelectorAll('.tab-button');
+                const tabContents = container.querySelectorAll('.tab-content');
+
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const tabId = button.dataset.tab;
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        tabContents.forEach(content => {
+                            content.classList.remove('active');
+                            if (content.id === tabId) {
+                                content.classList.add('active');
+                            }
+                        });
+                    });
+                });
+            });
+
+            // Accordion functionality
+            const accordionButtons = document.querySelectorAll('.accordion-button');
+            accordionButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const content = button.nextElementSibling;
+                    const icon = button.querySelector('.fa-chevron-down');
+                    button.classList.toggle('open');
+                    icon.style.transform = button.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+            
+            // Reveal on scroll
+            const revealElements = document.querySelectorAll('.reveal');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Optional: to fire only once
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            revealElements.forEach(el => observer.observe(el));
+
+            // Smooth scroll for nav links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
